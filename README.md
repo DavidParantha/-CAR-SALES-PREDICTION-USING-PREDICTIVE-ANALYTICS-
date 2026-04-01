@@ -1,57 +1,62 @@
 # Car Sale Prediction using Predictive Analytics
 
-This project implements a comprehensive predictive analytics pipeline for car sales pricing using a dataset of over 500,000 car sales records. The analysis follows a structured curriculum covering regression, classification, clustering, dimensionality reduction, and neural networks.
+This project implements a complete predictive analytics pipeline for car sales pricing. It covers every aspect from data preprocessing to advanced neural networks and model performance evaluation.
 
-## Project Structure
+## 📊 Project Units and Visualizations
 
-The project is divided into six core units:
+The project is structured into six comprehensive units:
 
 ### Unit I: Introduction and Data Preparation
-- **Load and Clean**: Handled massive dataset with appropriate error handling for malformed rows.
-- **Preprocessing**: Managed missing values and performed categorical encoding using LabelEncoder.
-- **EDA**: Visualized feature relationships using correlation heatmaps.
+We performed data cleaning, handled missing values, and visualized the distribution of car prices and feature correlations.
 
-![Correlation Map](images/correlation.png)
+![Price Distribution](images/price_distribution.png)
+![Correlation Heatmap](images/correlation_heatmap.png)
 
 ### Unit II: Supervised Learning - Regression
-- **Simple and Multiple Linear Regression**: Built models to predict `sellingprice` based on car features (MMR, Odometer, Year, Condition).
-- **Polynomial Regression**: Explored non-linear relationships using degree-2 polynomial features.
-- **Evaluation**: Achieved high R² scores, indicating strong predictive performance.
+We built Simple and Multiple Linear Regression models to predict car prices. The results show a high correlation between actual and predicted values.
+
+![Regression Results](images/regression_results.png)
 
 ### Unit III: Supervised Learning - Classification
-- **Binary Classification**: Created a "high_price" target variable to classify cars above median value.
-- **Decision Trees**: Implemented and visualized decision logic.
-- **Evaluation**: Assessed using Accuracy and Confusion Matrix.
+We categorized cars into "High Price" and "Normal Price" groups. A Decision Tree was used to visualize the classification logic.
 
 ![Confusion Matrix](images/confusion_matrix.png)
+![Decision Tree](images/decision_tree_viz.png)
 
 ### Unit IV: Unsupervised Learning - Clustering
-- **K-Means Clustering**: Grouped cars into 3 distinct categories based on features.
-- **Association Rules**: Used the Apriori algorithm to find patterns in car makes and price levels.
+We used K-Means to segment the cars into clusters and Hierarchical Clustering to understand the feature hierarchy.
+
+![Elbow Method](images/elbow_method.png)
+![Dendrogram](images/dendrogram.png)
 
 ### Unit V: Dimensionality Reduction & Neural Networks
-- **PCA**: Reduced 4D feature space to 2D for visualization.
-- **Neural Networks**: Implemented a Multi-layer Perceptron (MLP) regressor to capture complex pricing patterns.
+We applied Principal Component Analysis (PCA) to visualize the 4D dataset in 2D and trained a Multi-layer Perceptron (MLP) for advanced pricing prediction.
 
-![PCA Result](images/pca.png)
+![PCA Projection](images/pca_projection.png)
 
-### Unit VI: Model Performance
-- **Ensemble Learning**: Developed a Random Forest regressor for robust predictions.
-- **Cross-Validation**: Validated model stability using 5-fold cross-validation.
+### Unit VI: Model Performance & Ensembles
+We utilized Random Forest ensembles to achieve the highest predictive accuracy and analyzed feature importance.
 
-## How to Run
+![Feature Importance](images/feature_importance.png)
 
-1.  Ensure you have the requirements installed:
+## 🛠️ How to Run
+
+1.  **Clone the Repo**:
+    ```bash
+    git clone https://github.com/DavidParantha/-CAR-SALES-PREDICTION-USING-PREDICTIVE-ANALYTICS-.git
+    ```
+2.  **Install Required Packages**:
     ```bash
     pip install pandas numpy matplotlib seaborn scikit-learn mlxtend scipy
     ```
-2.  Update the `DATA_PATH` in `main.py` if necessary.
-3.  Execute the script:
+3.  **Run the Analysis**:
     ```bash
     python main.py
     ```
 
-## Technologies Used
-- **Language**: Python
-- **Libraries**: Pandas, Scikit-learn, Matplotlib, Seaborn, Mlxtend
-- **Concepts**: Regression, Classification, Clustering, PCA, Neural Networks, Ensembles
+## 💻 Technologies Used
+- **Python**: Core programming language.
+- **Scikit-learn**: For machine learning models and metrics.
+- **Pandas/Numpy**: For data manipulation.
+- **Seaborn/Matplotlib**: For all visualizations.
+- **Mlxtend**: For association rules.
